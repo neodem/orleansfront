@@ -30,6 +30,6 @@ public class MainController {
     public String init(@RequestParam(value = "playerNames") List<String> names, Model model) {
         PublicGameState gameState = gameService.initGame(names);
         model.addAttribute("gameState", gameState);
-        return "main";
+        return "game";
     }
 }

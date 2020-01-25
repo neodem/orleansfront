@@ -9,7 +9,19 @@
 
 <body>
 
-<p th:text="#{home.welcome}">Welcome to the game</p>
+
+<h1>Players</h1>
+
+<table>
+    <tr>
+        <th>NAME</th>
+        <th>COINS</th>
+    </tr>
+    <tr th:each="player : ${gameState.players}">
+        <td th:text="${player.playerId}">playerId</td>
+        <td th:text="${player.coinCount}">2</td>
+    </tr>
+</table>
 
 
 
