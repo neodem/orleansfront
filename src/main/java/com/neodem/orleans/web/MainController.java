@@ -23,7 +23,8 @@ public class MainController {
 
     @GetMapping("/")
     public String home(Model model) {
-        return "main";
+        model.addAttribute("message", "you suck");
+        return "vue";
     }
 
     @RequestMapping("/init")
