@@ -1,5 +1,6 @@
 package com.neodem.orleans.web;
 
+import com.google.common.collect.Lists;
 import com.neodem.orleans.objects.PublicGameState;
 import com.neodem.orleans.service.GameService;
 import org.springframework.stereotype.Controller;
@@ -32,5 +33,12 @@ public class MainController {
         PublicGameState gameState = gameService.initGame(names);
         model.addAttribute("gameState", gameState);
         return "game";
+    }
+
+    @RequestMapping("/pixi")
+    public String pixi(Model model) {
+//        PublicGameState gameState = gameService.initGame(Lists.newArrayList("a", "b"));
+//        model.addAttribute("gameState", gameState);
+        return "pixi";
     }
 }
